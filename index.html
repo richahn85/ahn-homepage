@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>안영찬 | AX 경영 리포트 구독 · 자문 · 컨설팅</title>
+<meta name="description" content="30년 경영 컨설팅 경험과 AI를 결합한 안영찬 교수의 월간 AX 경영 리포트 구독, 경영진 자문, 특강, 컨설팅 서비스.">
+<meta property="og:title" content="안영찬 | AX 경영 리포트 구독 · 자문 · 컨설팅">
+<meta property="og:description" content="AX 경영 컨설턴트 · 동국대학교 교수 · 국가기술표준원 국제표준 전문가. 월간 AX 경영 리포트를 구독하세요.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --paper:#F4F7FB;
+  --paper-2:#FFFFFF;
+  --ink:#12263F;
+  --ink-2:#42556E;
+  --seal:#1558A8;
+  --seal-dark:#0F4383;
+  --line:#D3DEEB;
+  --serif:'Noto Serif KR', serif;
+  --sans:'Pretendard Variable', Pretendard, -apple-system, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.7;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.serif{font-family:var(--serif)}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(244,247,251,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--serif);font-weight:900;font-size:1.15rem;text-decoration:none;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.brand .dot{width:9px;height:9px;background:var(--seal);display:inline-block}
+.nav-links{display:flex;gap:26px;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;font-size:.92rem;color:var(--ink-2);font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{
+  background:var(--seal);color:#fff!important;padding:9px 18px;
+  font-weight:700;font-size:.9rem!important;text-decoration:none;
+  transition:background .15s;
+}
+.nav-cta:hover{background:var(--seal-dark)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);padding:8px 12px;font-size:.9rem;cursor:pointer;font-family:var(--sans)}
+
+/* ---------- hero ---------- */
+.hero{padding:88px 0 72px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:start}
+.eyebrow{
+  font-size:.78rem;letter-spacing:.18em;font-weight:700;color:var(--seal);
+  text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--seal)}
+.hero h1{
+  font-family:var(--serif);font-weight:900;font-size:clamp(2.1rem,5vw,3.4rem);
+  line-height:1.28;letter-spacing:-.01em;margin-bottom:22px;
+}
+.hero h1 em{font-style:normal;box-shadow:inset 0 -0.42em 0 rgba(21,88,168,.14)}
+.hero .lede{font-size:1.08rem;color:var(--ink-2);max-width:600px;margin-bottom:14px}
+.hero .roles{font-size:.92rem;color:var(--ink-2);margin-bottom:34px}
+.hero .roles b{color:var(--ink)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:700;font-size:.98rem;
+  padding:14px 26px;transition:.15s;border:1px solid transparent;
+}
+.btn-seal{background:var(--seal);color:#fff}
+.btn-seal:hover{background:var(--seal-dark)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+/* seal stamp */
+.seal-box{
+  width:118px;height:118px;border:3px solid var(--seal);color:var(--seal);
+  display:grid;place-items:center;position:relative;
+  font-family:var(--serif);font-weight:900;font-size:1.5rem;line-height:1.35;
+  writing-mode:vertical-rl;text-orientation:upright;letter-spacing:.28em;
+  transform:rotate(-3deg);
+  box-shadow:0 0 0 1px rgba(21,88,168,.18) inset;
+  user-select:none;
+}
+.seal-box::after{
+  content:"印";position:absolute;bottom:6px;right:6px;font-size:.62rem;
+  writing-mode:horizontal-tb;letter-spacing:0;opacity:.7;
+}
+.hero-facts{display:flex;gap:40px;margin-top:56px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
+.fact .k{font-size:.75rem;letter-spacing:.14em;color:var(--ink-2);text-transform:uppercase}
+.fact .v{font-family:var(--serif);font-weight:700;font-size:1.2rem}
+
+/* ---------- section scaffolding ---------- */
+section{padding:84px 0}
+.sec-head{margin-bottom:44px;max-width:720px}
+.sec-head h2{
+  font-family:var(--serif);font-weight:900;font-size:clamp(1.6rem,3.4vw,2.2rem);
+  line-height:1.4;margin-bottom:14px;
+}
+.sec-head p{color:var(--ink-2);font-size:1.02rem}
+.rule-double{border:none;border-top:3px double var(--line);margin:0}
+
+/* ---------- subscription ---------- */
+#subscribe{background:var(--paper-2);border-bottom:1px solid var(--line)}
+.sub-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+.report-cover{
+  border:1px solid var(--line);background:var(--paper);
+  padding:34px 30px;position:relative;
+}
+.report-cover .tag{
+  position:absolute;top:22px;right:22px;
+  border:2px solid var(--seal);color:var(--seal);font-family:var(--serif);
+  font-weight:900;padding:4px 10px;font-size:.85rem;transform:rotate(2deg);
+}
+.report-cover .vol{font-size:.78rem;letter-spacing:.16em;color:var(--ink-2);margin-bottom:14px}
+.report-cover h3{font-family:var(--serif);font-weight:900;font-size:1.5rem;line-height:1.45;margin-bottom:18px}
+.report-cover ul{list-style:none;margin-top:8px}
+.report-cover li{
+  padding:11px 0;border-top:1px solid var(--line);font-size:.95rem;color:var(--ink-2);
+  display:flex;gap:10px;
+}
+.report-cover li b{color:var(--ink);min-width:86px;font-weight:700}
+.sub-note{font-size:.85rem;color:var(--ink-2);margin-top:16px}
+.plans{display:grid;gap:16px}
+.plan{
+  border:1px solid var(--line);background:var(--paper);padding:26px 26px 24px;
+  display:grid;grid-template-columns:1fr auto;gap:6px 18px;align-items:center;
+}
+.plan.featured{border:2px solid var(--ink);background:#fff;position:relative}
+.plan.featured::before{
+  content:"추천";position:absolute;top:-11px;left:22px;background:var(--ink);color:var(--paper);
+  font-size:.72rem;font-weight:700;letter-spacing:.1em;padding:2px 10px;
+}
+.plan h4{font-family:var(--serif);font-weight:700;font-size:1.08rem}
+.plan .desc{grid-column:1 / -1;font-size:.9rem;color:var(--ink-2)}
+.plan .price{text-align:right;white-space:nowrap}
+.plan .price b{font-family:var(--serif);font-size:1.45rem;font-weight:900}
+.plan .price span{font-size:.82rem;color:var(--ink-2)}
+.sub-form{margin-top:26px;border-top:3px double var(--line);padding-top:26px}
+.sub-form h4{font-family:var(--serif);font-weight:900;font-size:1.15rem;margin-bottom:6px}
+.sub-form p{font-size:.9rem;color:var(--ink-2);margin-bottom:18px}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+input,select,textarea{
+  width:100%;padding:12px 14px;border:1px solid var(--line);background:#fff;
+  font-family:var(--sans);font-size:.95rem;color:var(--ink);
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-offset:-1px}
+textarea{resize:vertical;min-height:110px}
+.form-btn{
+  width:100%;background:var(--seal);color:#fff;border:none;padding:15px;
+  font-weight:700;font-size:1rem;cursor:pointer;font-family:var(--sans);
+  margin-top:4px;transition:.15s;
+}
+.form-btn:hover{background:var(--seal-dark)}
+.form-fine{font-size:.8rem;color:var(--ink-2);margin-top:10px}
+
+/* ---------- services ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.svc{
+  border:1px solid var(--line);background:var(--paper-2);padding:30px;
+  display:flex;flex-direction:column;gap:12px;
+}
+.svc .svc-tag{font-size:.75rem;letter-spacing:.16em;font-weight:700;color:var(--seal)}
+.svc h3{font-family:var(--serif);font-weight:900;font-size:1.28rem;line-height:1.4}
+.svc p{color:var(--ink-2);font-size:.95rem;flex:1}
+.svc .meta{border-top:1px solid var(--line);padding-top:14px;font-size:.88rem;color:var(--ink-2)}
+.svc .meta b{color:var(--ink);font-family:var(--serif)}
+.svc .fee{
+  display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  border-top:1px solid var(--line);padding-top:14px;
+}
+.svc .fee .amount{font-family:var(--serif);font-weight:900;font-size:1.2rem}
+.svc .fee .unit{font-size:.82rem;color:var(--ink-2)}
+.svc a.link{font-size:.92rem;font-weight:700;color:var(--seal);text-decoration:none}
+.svc a.link:hover{text-decoration:underline}
+
+/* ---------- expertise ---------- */
+#expertise{background:var(--ink);color:var(--paper)}
+#expertise .sec-head h2{color:#fff}
+#expertise .sec-head p{color:#B9C9DD}
+#expertise .eyebrow{color:#7FB0E8}
+#expertise .eyebrow::before{background:#7FB0E8}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#28405E;border:1px solid #28405E}
+.exp{background:var(--ink);padding:28px 26px}
+.exp h3{font-family:var(--serif);font-weight:700;font-size:1.08rem;margin-bottom:10px;color:#fff}
+.exp p{font-size:.9rem;color:#A5B8CF}
+.exp .no{font-size:.75rem;letter-spacing:.15em;color:#7FB0E8;display:block;margin-bottom:12px}
+
+/* ---------- proof ---------- */
+.proof-firsts{border:1px solid var(--line);background:var(--paper-2);padding:34px;margin-bottom:40px}
+.proof-firsts h3{font-family:var(--serif);font-weight:900;font-size:1.2rem;margin-bottom:18px}
+.first-list{list-style:none;columns:2;column-gap:44px}
+.first-list li{
+  break-inside:avoid;padding:10px 0;border-top:1px solid var(--line);
+  font-size:.93rem;color:var(--ink-2);
+}
+.first-list li b{color:var(--seal);font-weight:700;margin-right:8px}
+.clients{display:flex;flex-wrap:wrap;gap:10px}
+.clients span{
+  border:1px solid var(--line);background:var(--paper-2);padding:7px 16px;
+  font-size:.86rem;color:var(--ink-2);
+}
+.stats{display:flex;gap:44px;flex-wrap:wrap;margin-top:36px;border-top:3px double var(--line);padding-top:28px}
+.stat .n{font-family:var(--serif);font-weight:900;font-size:2rem;line-height:1.2}
+.stat .l{font-size:.86rem;color:var(--ink-2)}
+
+/* ---------- photos ---------- */
+.photo-fig{margin-top:22px;border:1px solid var(--line);background:var(--paper-2);padding:12px}
+.photo-fig img{width:100%;height:auto;filter:saturate(.92)}
+.photo-fig figcaption{font-size:.82rem;color:var(--ink-2);padding:10px 4px 2px}
+.career-grid{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:start}
+.career-grid .photo-fig{margin-top:0;position:sticky;top:88px}
+
+/* ---------- pro bono ---------- */
+#probono{background:var(--paper-2);border-top:1px solid var(--line)}
+.pb-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.pb-list{list-style:none}
+.pb-list li{border-top:1px solid var(--line);padding:16px 0;display:flex;gap:14px}
+.pb-list li .m{font-family:var(--serif);font-weight:900;color:var(--seal);min-width:26px}
+.pb-list li h4{font-family:var(--serif);font-weight:700;font-size:1.02rem;margin-bottom:2px}
+.pb-list li p{font-size:.9rem;color:var(--ink-2)}
+.pb-support{border:2px solid var(--seal);background:var(--paper);padding:30px}
+.pb-support h3{font-family:var(--serif);font-weight:900;font-size:1.2rem;margin-bottom:10px}
+.pb-support p{font-size:.92rem;color:var(--ink-2);margin-bottom:10px}
+.pb-support .acct{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:1.02rem;margin:12px 0 2px}
+
+/* ---------- career ---------- */
+.tl{list-style:none;border-left:2px solid var(--line);margin-left:6px}
+.tl li{padding:0 0 30px 28px;position:relative}
+.tl li::before{
+  content:"";position:absolute;left:-6px;top:8px;width:10px;height:10px;
+  background:var(--paper);border:2px solid var(--seal);border-radius:50%;
+}
+.tl .when{font-size:.8rem;letter-spacing:.1em;color:var(--seal);font-weight:700}
+.tl h3{font-family:var(--serif);font-weight:700;font-size:1.1rem;margin:4px 0 4px}
+.tl p{font-size:.92rem;color:var(--ink-2)}
+.pub{margin-top:48px}
+.pub h3{font-family:var(--serif);font-weight:900;font-size:1.2rem;margin-bottom:16px}
+.pub ul{list-style:none}
+.pub li{display:flex;gap:18px;padding:11px 0;border-top:1px solid var(--line);font-size:.93rem}
+.pub li .y{color:var(--seal);font-weight:700;font-family:var(--serif);min-width:52px}
+.pub li .t{color:var(--ink-2)}
+
+/* ---------- contact ---------- */
+#contact{background:var(--paper-2);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-info .item{border-top:1px solid var(--line);padding:16px 0}
+.contact-info .k{font-size:.78rem;letter-spacing:.14em;color:var(--ink-2);text-transform:uppercase}
+.contact-info .v{font-family:var(--serif);font-weight:700;font-size:1.05rem}
+.contact-info a{text-decoration:none}
+.contact-info a:hover{text-decoration:underline}
+
+/* ---------- support / footer ---------- */
+.support{border:1px solid var(--line);background:var(--paper);padding:26px 30px;margin-top:40px}
+.support h4{font-family:var(--serif);font-weight:900;margin-bottom:8px}
+.support p{font-size:.88rem;color:var(--ink-2)}
+.support .acct{font-family:var(--serif);font-weight:700;margin-top:8px}
+.copy-btn{
+  margin-top:10px;background:none;border:1px solid var(--ink);padding:8px 16px;
+  font-size:.84rem;cursor:pointer;font-family:var(--sans);font-weight:600;
+}
+.copy-btn:hover{background:var(--ink);color:var(--paper)}
+footer{padding:36px 0;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--ink-2)}
+.foot a{text-decoration:none}
+.foot a:hover{text-decoration:underline}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .seal-box{display:none}
+  .sub-grid,.contact-grid,.pb-grid{grid-template-columns:1fr}
+  .career-grid{grid-template-columns:1fr}
+  .career-grid .photo-fig{position:static;max-width:340px}
+  .svc-grid{grid-template-columns:1fr}
+  .exp-grid{grid-template-columns:1fr}
+  .first-list{columns:1}
+  .nav-links{
+    display:none;position:absolute;top:64px;left:0;right:0;
+    background:var(--paper);border-bottom:1px solid var(--line);
+    flex-direction:column;padding:18px 24px;gap:16px;align-items:flex-start;
+  }
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  form .row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="dot"></span>안영찬</a>
+    <button class="menu-btn" onclick="document.getElementById('nl').classList.toggle('open')" aria-label="메뉴 열기">메뉴</button>
+    <ul class="nav-links" id="nl">
+      <li><a href="#subscribe">리포트 구독</a></li>
+      <li><a href="#services">서비스·비용</a></li>
+      <li><a href="#expertise">전문분야</a></li>
+      <li><a href="#proof">신뢰 근거</a></li>
+      <li><a href="#career">경력</a></li>
+      <li><a href="#probono">사회공헌</a></li>
+      <li><a class="nav-cta" href="#subscribe">구독 신청하기</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">AX Management · Since 1992</div>
+        <h1>30년의 경영 컨설팅 위에<br>AI를 얹어, <em>실행되는 전략</em>을<br>매달 당신의 책상 위에.</h1>
+        <p class="lede">현대백화점 국내 최초 CRM, 국내 최초 K-BPI 브랜드파워 지수, 국내 최초 중대재해처벌법 대응 프로그램. "국내 최초"를 만들어 온 경험으로 이제 AX(AI 전환) 시대의 다음 수를 리포트와 자문으로 전해 드립니다.</p>
+        <p class="roles"><b>안영찬</b> — 동국대학교 경영대학원 교수 · 미래융합 대표컨설턴트 · 국가기술표준원 선정 국제표준 전문가</p>
+        <div class="cta-row">
+          <a class="btn btn-seal" href="#subscribe">월간 리포트 구독하기</a>
+          <a class="btn btn-ghost" href="#services">자문·컨설팅 문의</a>
+        </div>
+      </div>
+      <div class="seal-box" aria-hidden="true">안영찬</div>
+    </div>
+    <div class="hero-facts">
+      <div class="fact"><div class="k">Experience</div><div class="v">30년+</div></div>
+      <div class="fact"><div class="k">국내 최초 프로젝트</div><div class="v">7건+</div></div>
+      <div class="fact"><div class="k">강의·자문 기업</div><div class="v">200개사+</div></div>
+      <div class="fact"><div class="k">발행 보고서·저서</div><div class="v">30편+</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SUBSCRIPTION ============ -->
+<section id="subscribe">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Subscription · 정기 리포트</div>
+      <h2>월간 「AX 경영 브리프」 —<br>임원의 의사결정을 위한 한 달에 한 번의 정독</h2>
+      <p>뉴스 요약이 아닙니다. 30년 컨설팅 프레임(TPS, 6시그마, BSC, MBNQA)으로 AI 전환의 흐름을 해석하고, 이번 달 당신의 조직이 무엇을 결정해야 하는지까지 짚는 실행형 리포트입니다.</p>
+    </div>
+
+    <div class="sub-grid">
+      <div>
+        <div class="report-cover">
+          <span class="tag">月刊</span>
+          <div class="vol">AX MANAGEMENT BRIEF · 매월 첫째 주 발행 · PDF 12~16면</div>
+          <h3>매호 구성</h3>
+          <ul>
+            <li><b>이달의 판단</b><span>AI·경영 이슈 중 임원이 지금 결정해야 할 한 가지를 심층 분석</span></li>
+            <li><b>현장 프레임</b><span>TPS·품질경영·표준화 관점으로 본 AX 적용 사례와 함정</span></li>
+            <li><b>실행 체크리스트</b><span>이번 달 조직에 바로 적용할 점검 항목과 KPI 제안</span></li>
+            <li><b>Q&amp;A 코너</b><span>구독자 질문 중 공통 관심사를 선별해 서면 답변</span></li>
+          </ul>
+          <p class="sub-note">기업 플랜 구독사는 분기 1회 60분 화상 브리핑과 임원 질의응답이 포함됩니다.</p>
+        </div>
+        <figure class="photo-fig">
+          <img src="assets/ahn-lecture.webp" alt="강의 중 마이크를 들고 설명하는 안영찬 교수" loading="lazy">
+          <figcaption>리포트에 담기는 관점은 매달 강의·자문 현장에서 검증됩니다.</figcaption>
+        </figure>
+      </div>
+
+      <div>
+        <div class="plans">
+          <div class="plan">
+            <h4>개인 구독</h4>
+            <div class="price"><b>월 30,000원</b><br><span>연간 결제 시 300,000원 (2개월 무료)</span></div>
+            <p class="desc">월간 리포트 PDF + 구독자 Q&amp;A 참여. 개인 학습·연구 목적 이용.</p>
+          </div>
+          <div class="plan featured">
+            <h4>팀·기업 구독</h4>
+            <div class="price"><b>월 150,000원</b><br><span>연간 결제 시 1,500,000원 (2개월 무료)</span></div>
+            <p class="desc">사내 공유 라이선스 + 분기 1회 60분 화상 브리핑 + 임원 질의 우선 답변.</p>
+          </div>
+          <div class="plan">
+            <h4>기업 구독 + 자문 결합</h4>
+            <div class="price"><b>별도 협의</b><br><span>월 자문 리테이너와 결합 시 구독료 면제</span></div>
+            <p class="desc">아래 '경영진 자문' 서비스와 결합해 리포트·자문을 하나의 계약으로.</p>
+          </div>
+        </div>
+
+        <div class="sub-form">
+          <h4>구독 신청</h4>
+          <p>신청 접수 후 1영업일 내 입금 안내와 첫 호를 이메일로 보내 드립니다.</p>
+          <form name="subscribe" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="subscribe">
+            <input type="hidden" name="subject" value="안영찬 홈페이지 구독 신청">
+            <p style="display:none"><input name="bot-field"></p>
+            <div class="row">
+              <input type="text" name="name" placeholder="성함 *" required>
+              <input type="text" name="org" placeholder="소속 (회사·기관)">
+            </div>
+            <div class="row">
+              <input type="email" name="email" placeholder="이메일 *" required>
+              <input type="tel" name="phone" placeholder="연락처">
+            </div>
+            <select name="plan" required>
+              <option value="" disabled selected>구독 플랜 선택 *</option>
+              <option>개인 구독 — 월 30,000원</option>
+              <option>개인 구독 — 연간 300,000원</option>
+              <option>팀·기업 구독 — 월 150,000원</option>
+              <option>팀·기업 구독 — 연간 1,500,000원</option>
+              <option>기업 구독 + 자문 결합 (협의)</option>
+            </select>
+            <button class="form-btn" type="submit">구독 신청하기</button>
+            <p class="form-fine">결제는 계좌이체로 진행되며, 세금계산서·현금영수증 발행이 가능합니다. 구독은 언제든 해지할 수 있습니다.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Services · 서비스와 비용</div>
+      <h2>목적과 깊이에 따라, 네 가지 방식으로 함께합니다</h2>
+      <p>가벼운 정기 구독에서 시작해 특강, 월 단위 자문, 프로젝트 컨설팅으로 확장할 수 있습니다. 표기 비용은 기준가이며, 규모와 조건에 따라 협의합니다.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc">
+        <span class="svc-tag">01 · SUBSCRIBE</span>
+        <h3>월간 AX 경영 브리프 구독</h3>
+        <p>매월 발행되는 실행형 리포트. AI 전환의 흐름을 임원의 언어로 해석하고 이번 달의 결정을 제안합니다.</p>
+        <div class="meta">대상 — <b>임원, 리더, 기획·전략 담당자</b></div>
+        <div class="fee"><span class="amount">월 30,000원부터</span><span class="unit">개인 / 기업 플랜</span></div>
+        <a class="link" href="#subscribe">구독 신청하기 →</a>
+      </div>
+
+      <div class="svc">
+        <span class="svc-tag">02 · LECTURE</span>
+        <h3>AI·AX 전략 특강과 워크숍</h3>
+        <p>임원 조찬 특강부터 전사 워크숍까지. "AI 시대 유통과 금융전략"(농협 집행임원), "AX 전환 전략"(강원도 고위 공무원) 등 조직 맞춤 설계. 영어 진행 가능.</p>
+        <div class="meta">산출물 — <b>맞춤 강의안, 사례 분석, 실행 체크리스트</b></div>
+        <div class="fee"><span class="amount">회당 2,000,000원부터</span><span class="unit">2시간 기준 · 협의</span></div>
+        <a class="link" href="#contact">특강 문의하기 →</a>
+      </div>
+
+      <div class="svc">
+        <span class="svc-tag">03 · ADVISORY</span>
+        <h3>경영진 정기 자문 (월 리테이너)</h3>
+        <p>월 2회 대면·화상 미팅과 수시 서면 자문. AX 로드맵, B2B 전략, 조직문화, 안전경영 등 경영진의 의사결정을 상시 지원합니다. 월간 리포트 기업 구독 포함.</p>
+        <div class="meta">대상 — <b>CEO, 임원, 프로젝트 책임자</b></div>
+        <div class="fee"><span class="amount">월 3,000,000원부터</span><span class="unit">3개월 단위 계약</span></div>
+        <a class="link" href="#contact">자문 문의하기 →</a>
+      </div>
+
+      <div class="svc">
+        <span class="svc-tag">04 · CONSULTING</span>
+        <h3>AX 실행 로드맵 컨설팅</h3>
+        <p>현황 진단 → 로드맵 → KPI → 실행 과제까지. AI 업무자동화, 스마트팩토리, 고객경험, 표준화, 중대재해 대응 등 프로젝트 단위로 수행합니다.</p>
+        <div class="meta">산출물 — <b>진단 보고서, 전환 로드맵, KPI 체계, 실행 과제</b></div>
+        <div class="fee"><span class="amount">프로젝트 견적</span><span class="unit">범위·기간 협의</span></div>
+        <a class="link" href="#contact">컨설팅 문의하기 →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERTISE ============ -->
+<section id="expertise">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Expertise · 전문분야</div>
+      <h2>여섯 개의 축이 하나의 로드맵으로 연결됩니다</h2>
+      <p>전략, 기술, 조직 실행을 따로 팔지 않습니다. AX를 중심축으로 두고 나머지가 맞물리도록 설계합니다.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp"><span class="no">AX-01</span><h3>AX(AI 전환) 경영 컨설팅</h3><p>Custom GPT, Copilot, Claude를 조직 업무 프로세스와 연결하고 성과 지표까지 설계합니다.</p></div>
+      <div class="exp"><span class="no">AX-02</span><h3>AI Agentic 업무자동화</h3><p>반복 업무, 문서 작성, 데이터 분석, 보고 체계를 AI 에이전트 기반으로 전환합니다.</p></div>
+      <div class="exp"><span class="no">AX-03</span><h3>B2B 마케팅 전략</h3><p>시장 분석, 세일즈 전환, 신사업·신상품 개발(NPI·CECOR), 채널 전략을 잇는 성장 체계.</p></div>
+      <div class="exp"><span class="no">AX-04</span><h3>고객경험·서비스 품질</h3><p>CSM·CSI 모델, Service Quality Process, MOT 평가와 고객만족 경영 체계 구축.</p></div>
+      <div class="exp"><span class="no">AX-05</span><h3>표준화·공공 컨설팅</h3><p>국제표준, 데이터 표준화, 스마트관광도시, 규제자유특구 등 공공 프로젝트 자문.</p></div>
+      <div class="exp"><span class="no">AX-06</span><h3>조직문화·GWP·안전경영</h3><p>일하기 좋은 기업, 변화관리, TPS 기반 현장 혁신, 중대재해처벌법 대응 안전경영.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROOF ============ -->
+<section id="proof">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Proof · 신뢰 근거</div>
+      <h2>"국내 최초"의 기록이 곧 이력서입니다</h2>
+    </div>
+
+    <div class="proof-firsts">
+      <h3>국내 최초 수행 프로젝트</h3>
+      <ul class="first-list">
+        <li><b>최초</b>한국산업 브랜드 파워 지수(K-BPI) 모델 개발·런칭</li>
+        <li><b>최초</b>CRM 개념 적용 현대백화점 프로젝트 PM</li>
+        <li><b>최초</b>중대재해처벌법 대응·안전경영 프로그램 런칭</li>
+        <li><b>최초</b>스마트관광도시 발전방안 컨설팅 (인천)</li>
+        <li><b>최초</b>스마트관광도시 추진 가이드라인 매뉴얼 (한국관광공사)</li>
+        <li><b>최초</b>은행 소형특화점포 마케팅전략 컨설팅</li>
+        <li><b>최초</b>공과금 자동화 기기 도입 컨설팅</li>
+        <li><b>최초</b>B2B 마케팅 전략 교육과정 프로그램 런칭</li>
+      </ul>
+    </div>
+
+    <div class="clients">
+      <span>삼성전자</span><span>SK Telecom</span><span>LG화학</span><span>현대자동차</span>
+      <span>국민은행</span><span>우리은행</span><span>하나은행</span><span>농협중앙회</span>
+      <span>포스코</span><span>한화건설</span><span>CJ</span><span>한국관광공사</span>
+      <span>한국표준협회</span><span>강원도</span><span>동국대학교</span><span>DuPont</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">30년+</div><div class="l">경영 컨설팅·교육 경험</div></div>
+      <div class="stat"><div class="n">3개국</div><div class="l">TPS 영어 연수 진행 (한·일·말레이시아)</div></div>
+      <div class="stat"><div class="n">100대 기업</div><div class="l">GWP Korea 일하기 좋은 기업 심사위원장</div></div>
+      <div class="stat"><div class="n">2022~</div><div class="l">국가기술표준원 선정 국제표준 전문가</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAREER ============ -->
+<section id="career">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Career · 경력</div>
+      <h2>연구실과 현장을 오간 30년</h2>
+    </div>
+    <div class="career-grid">
+      <div>
+        <ul class="tl">
+      <li><span class="when">현재</span><h3>동국대학교 경영대학원 교수</h3><p>AI 활용전략, 경영전략, 마케팅, 조직혁신 강의와 자문. 새만금개발청 자문교수, 스마트도시협회 AI 도시 구축 자문교수, 한국생산관리학회 대외협력위원장.</p></li>
+      <li><span class="when">2022 — 현재</span><h3>국가기술표준원 선정 국제표준 전문가 · 미래융합 대표컨설턴트</h3><p>국제표준화 지원, 데이터·기술 표준화, 스마트팩토리 컨설팅 (한국표준협회 전문위원).</p></li>
+      <li><span class="when">2001 — 2021</span><h3>BZeye School 주임교수 · BZeye컨설팅 대표컨설턴트</h3><p>B2B 마케팅, CRM, 금융 채널 전략, 서비스 품질, 변화관리 교육·컨설팅. 전경련 국제경영원 주임교수.</p></li>
+      <li><span class="when">1992 — 2001</span><h3>연구·컨설팅·마케팅 실무</h3><p>동국대학교 경영관리연구소, 한국능률협회컨설팅, 한국시그마컨설팅, ㈜미디어랜드 마케팅 임원.</p></li>
+      <li><span class="when">학력</span><h3>동국대학교 경영학 박사</h3><p>동국대학교 경영학과 졸업, 동 대학원 경영학 석사·박사.</p></li>
+    </ul>
+
+    <div class="pub">
+      <h3>주요 발행 보고서·저서</h3>
+      <ul>
+        <li><span class="y">2024</span><span class="t">규제자유특구 매치업기업 컨설턴트 조사결과 최종보고서</span></li>
+        <li><span class="y">2023</span><span class="t">스마트농업 표준화 파급효과 최종보고서 · 국가데이터 표준화 현황 보고서</span></li>
+        <li><span class="y">2021</span><span class="t">스마트관광도시 중장기 발전전략 수립 최종보고서 · 4차산업혁명 기술연계 표준화수요발굴</span></li>
+        <li><span class="y">2017</span><span class="t">General Electric 노사관계의 역사적 전개와 리더십 (대한경영학회)</span></li>
+        <li><span class="y">발간</span><span class="t">세계 은행 산업의 패러다임 변화 · 한국 진출 3대 글로벌 은행 보고서</span></li>
+      </ul>
+    </div>
+      </div>
+      <figure class="photo-fig">
+        <img src="assets/ahn-portrait.webp" alt="안영찬 교수 흑백 프로필 사진" loading="lazy">
+        <figcaption>현장 경험과 학문적 체계를 함께 다루는 경영학자</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRO BONO ============ -->
+<section id="probono">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Pro Bono · 사회공헌</div>
+      <h2>유료 서비스의 수익과 후원금으로,<br>사회적 약자를 위한 무료 서비스를 운영합니다</h2>
+      <p>AI 전환의 격차는 곧 생존의 격차가 됩니다. 자문료를 감당하기 어려운 사회적기업, 소상공인, 비영리단체에는 구독·자문 수익과 후원금을 재원으로 같은 수준의 지식을 무료로 제공합니다.</p>
+    </div>
+    <div class="pb-grid">
+      <div>
+        <ul class="pb-list">
+          <li><span class="m">一</span><div><h4>사회적기업·협동조합 무료 자문</h4><p>경영전략, AI 업무자동화, 마케팅 과제에 대한 무료 자문 세션 (분기별 선정)</p></div></li>
+          <li><span class="m">二</span><div><h4>소상공인 AI 활용 무료 특강</h4><p>ChatGPT·Claude를 활용한 홍보물 제작, 고객 응대, 장부 정리 등 바로 쓰는 실무 교육</p></div></li>
+          <li><span class="m">三</span><div><h4>비영리단체·복지기관 리포트 무료 구독</h4><p>월간 「AX 경영 브리프」를 비영리단체에 무상 제공</p></div></li>
+          <li><span class="m">四</span><div><h4>학생 취업 역량 멘토링</h4><p>공개 강의 자료 제작과 취업 준비생 대상 멘토링·특강 (YDSL 등)</p></div></li>
+        </ul>
+        <p class="form-fine" style="margin-top:14px">무료 서비스 신청 — 아래 문의 폼에서 유형을 '사회공헌 무료 서비스'로 선택해 주세요. 사회적기업 인증, 소상공인 확인 등 간단한 확인 후 진행됩니다.</p>
+      </div>
+      <div class="pb-support" id="support">
+        <h3>후원 안내</h3>
+        <p>보내주신 후원은 전액 사회적기업·소상공인·비영리단체를 위한 무료 자문과 특강, 학생 멘토링, 공개 강의 자료 제작에 사용됩니다.</p>
+        <p class="acct">신한은행 110-297-224610 (안영찬)</p>
+        <button class="copy-btn" onclick="navigator.clipboard.writeText('110-297-224610').then(()=>{this.textContent='복사되었습니다';setTimeout(()=>this.textContent='계좌번호 복사',1800)})">계좌번호 복사</button>
+        <p style="margin-top:14px;font-size:.82rem">후원해 주신 분께는 분기별 사회공헌 활동 결과를 이메일로 보고드립니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Contact · 문의</div>
+      <h2>특강·자문·컨설팅 문의</h2>
+      <p>목적, 대상 조직, 희망 일정을 함께 적어 주시면 1영업일 내 회신드립니다.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="subject" value="안영찬 홈페이지 문의">
+          <p style="display:none"><input name="bot-field"></p>
+          <div class="row">
+            <input type="text" name="name" placeholder="성함 *" required>
+            <input type="text" name="org" placeholder="소속 (회사·기관)">
+          </div>
+          <div class="row">
+            <input type="email" name="email" placeholder="이메일 *" required>
+            <select name="type" required>
+              <option value="" disabled selected>문의 유형 *</option>
+              <option>특강·워크숍</option>
+              <option>경영진 정기 자문</option>
+              <option>AX 컨설팅 프로젝트</option>
+              <option>리포트 구독 관련</option>
+              <option>사회공헌 무료 서비스 (사회적기업·소상공인·비영리)</option>
+              <option>기타</option>
+            </select>
+          </div>
+          <textarea name="message" placeholder="문의 내용 — 목적, 대상, 희망 일정 등 *" required></textarea>
+          <button class="form-btn" type="submit">문의 보내기</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <div class="item"><div class="k">공식 문의</div><div class="v"><a href="mailto:richahn@dongguk.edu">richahn@dongguk.edu</a></div></div>
+        <div class="item"><div class="k">개인 문의</div><div class="v"><a href="mailto:richahn85@gmail.com">richahn85@gmail.com</a></div></div>
+        <div class="item"><div class="k">강의 영상</div><div class="v"><a href="https://www.youtube.com/@cute_ahn_Professor" target="_blank" rel="noopener">YouTube — @cute_ahn_Professor</a></div></div>
+        <div class="item"><div class="k">소속</div><div class="v">동국대학교 경영대학원 · 미래융합</div></div>
+        <div class="item"><div class="k">사회공헌 후원</div><div class="v"><a href="#support">후원 안내 보기</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 안영찬. All rights reserved. <span style="color:var(--seal);font-weight:700">· Blue Edition</span></span>
+    <span><a href="#subscribe">리포트 구독</a> · <a href="#services">서비스</a> · <a href="#probono">사회공헌</a> · <a href="#top">맨 위로</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
