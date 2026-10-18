@@ -93,20 +93,9 @@
         <div>
           <p class="eyebrow">PUBLIC SUMMARY</p>
           <h3>일반 방문자용 핵심 요약본</h3>
-          <p>성명, 회사명, 직책, 업무 이메일과 개인정보 활용 동의만 제출하면 안영찬 교수, 법무법인 동인, 아롬정보기술의 공식 핵심요약본 3종을 바로 받을 수 있습니다.</p>
+          <p>이메일 등록과 수집·이용 동의 후 안영찬 교수, 법무법인 동인, 아롬정보기술의 공식 핵심요약본 3종을 바로 받을 수 있습니다.</p>
         </div>
-        <form name="seminar-summary-20260720" method="POST" action="summary-download.html" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="seminar-summary-20260720">
-          <input class="hidden" name="bot-field" tabindex="-1" autocomplete="off">
-          <div class="info-grid">
-            <label>성명 *<input name="name" autocomplete="name" required></label>
-            <label>회사명 *<input name="company" autocomplete="organization" required></label>
-            <label>직책 *<input name="position" autocomplete="organization-title" required></label>
-            <label>업무 이메일 *<input name="email" type="email" autocomplete="email" required></label>
-          </div>
-          <label class="consent"><input name="privacy-consent" type="checkbox" value="동의" required> 세미나·강의·자문 관련 안내를 위한 개인정보 수집·이용에 동의합니다. (보유 1년, 동의 철회 시 즉시 파기)</label>
-          <button class="summary-submit" type="submit">정보 제출 후 요약본 받기</button>
-        </form>
+        <p><a class='summary-submit' href='/seminar/20260720/summary-download'>이메일 등록 후 요약본 받기 →</a></p>
       </div>
     </section>
 
@@ -140,7 +129,7 @@
         <article>
           <span>03</span><h3>다음 세미나 사전 알림</h3>
           <p>후속 세미나의 주제와 일정이 확정되면 가장 먼저 안내받으세요.</p>
-          <form name="seminar-alert-20260720" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field">
+          <form action='/thank-you' method='POST' name='seminar-alert-20260720'>
             <input type="hidden" name="form-name" value="seminar-alert-20260720">
             <input class="hidden" name="bot-field" tabindex="-1" autocomplete="off">
             <label for="alert-email">이메일</label>
