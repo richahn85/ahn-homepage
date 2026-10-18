@@ -5,7 +5,7 @@ import json, re, html
 ROOT=Path(__file__).resolve().parents[1]
 legacy=json.loads((ROOT/'content/legacy.json').read_text(encoding='utf-8'))
 BASE='https://ahnyoungchan.kr'
-NAV=[('ABOUT','/about'),('ADVISORY','/advisory'),('TRANSFORMATION','/ax-transformation'),('CASES','/cases'),('INSIGHTS','/insights'),('PEOPLE FIRST','/people-first')]
+NAV=[('강의·특강','/executive-education'),('기업 자문','/advisory'),('AI 전환','/ax-transformation'),('공공·연구','/research'),('실적','/cases'),('인사이트','/insights'),('소개','/about')]  # V3; live pages are now edited in place, see scripts/*_v3.py
 pages=[]
 def a(label,url,primary=False):
     return f'<a class="btn {"btn-seal" if primary else "text-link"}" href="{url}">{label} <span aria-hidden="true">↗</span></a>'
