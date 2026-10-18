@@ -2,8 +2,32 @@
   publish = "."
 
 [[headers]]
+  for = "/downloads/samsung-apple/*.pptx"
+  [headers.values]
+    Content-Disposition = "attachment"
+
+[[headers]]
+  for = "/downloads/samsung-apple/*.pdf"
+  [headers.values]
+    Content-Disposition = "attachment"
+
+[[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Preserve production card-news entry URLs and their existing external targets.
+[[redirects]]
+  from = "/safety-cardnews-part5-20260731/*"
+  to = "https://safety-cardnews-part5-20260731.netlify.app/:splat"
+  status = 301
+[[redirects]]
+  from = "/safety-cardnews-part4-20260721/*"
+  to = "https://safety-cardnews-part4-20260721.netlify.app/:splat"
+  status = 301
+[[redirects]]
+  from = "/safety-cardnews-part3-20260709/*"
+  to = "https://safety-cardnews-part3-20260709.netlify.app/:splat"
+  status = 301

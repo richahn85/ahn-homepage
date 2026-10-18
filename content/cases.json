@@ -1,0 +1,50 @@
+{
+  "legacyHeadline": "7건+",
+  "listedItems": 8,
+  "verifiedCount": null,
+  "status": "TODO: verify each domestic-first claim with dated external evidence",
+  "cases": [
+    {
+      "slug": "k-bpi",
+      "title": "K-BPI 브랜드파워 지수",
+      "sourceClaim": "한국산업 브랜드 파워 지수(K-BPI) 모델 개발·런칭",
+      "evidenceUrls": [],
+      "verification": "pending"
+    },
+    {
+      "slug": "hyundai-crm",
+      "title": "현대백화점 CRM",
+      "sourceClaim": "CRM 개념 적용 현대백화점 프로젝트 PM",
+      "evidenceUrls": [],
+      "verification": "pending"
+    },
+    {
+      "slug": "b2b-marketing",
+      "title": "B2B Marketing",
+      "sourceClaim": "B2B 마케팅 전략 교육과정 프로그램 런칭",
+      "evidenceUrls": [],
+      "verification": "pending"
+    },
+    {
+      "slug": "smart-tourism",
+      "title": "Smart Tourism",
+      "sourceClaim": "스마트관광도시 발전방안 컨설팅(인천), 추진 가이드라인 매뉴얼(한국관광공사)",
+      "evidenceUrls": [],
+      "verification": "pending"
+    },
+    {
+      "slug": "safety-management",
+      "title": "Safety Management",
+      "sourceClaim": "중대재해처벌법 대응·안전경영 프로그램 런칭",
+      "evidenceUrls": [],
+      "verification": "pending"
+    },
+    {
+      "slug": "ai-transformation",
+      "title": "AI Transformation",
+      "sourceClaim": "기업·기관 AI 활용과 업무 프로세스 전환",
+      "evidenceUrls": [],
+      "verification": "pending"
+    }
+  ]
+}
