@@ -10,7 +10,7 @@ import hashlib, json, subprocess, sys, time, urllib.parse, urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 SID = '0743687b-b75b-4236-80dc-be3791849339'
-BASE_COMMIT = '628eadd'  # commit that mirrors the live deploy
+BASE_COMMIT = '989dee2'  # commit that mirrors the live deploy (6ad5478d, V3)
 RECEIPT = ROOT / '.netlify' / 'v3-preview-deploy.json'
 REPO_ONLY = ('scripts/', 'content/', '.gitignore', 'README.md', 'INITIAL_CONTENT.md', 'AUTHORITY_EDIT.md', 'V2_AUDIT.md', 'V2_DELIVERY.md')
 
@@ -68,7 +68,7 @@ if mode == 'preview':
     print(f'live deploy {pub["id"]}: {len(live)} files kept, {len(changed)} changed/new:')
     print('\n'.join('  ' + p for p in changed))
     payload = {'draft': True, 'files': digest, **fn_payload(pub)}
-    d = api('sites/' + SID + '/deploys?title=' + urllib.parse.quote('V3 Korean menu, lecture topics, research page'), 'POST', payload)
+    d = api('sites/' + SID + '/deploys?title=' + urllib.parse.quote(sys.argv[2] if len(sys.argv) > 2 else 'V3 update'), 'POST', payload)
     assert not d.get('required_functions') and not d.get('required_edge_functions'), 'function bundles missing, stop'
     for sha in d.get('required', []):
         path, data = uploads[sha]
