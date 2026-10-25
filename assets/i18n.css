@@ -1,0 +1,18 @@
+.lang-switch{display:flex;gap:4px;align-items:center;font-size:12px;font-weight:600;white-space:nowrap}
+.lang-switch a{padding:6px 6px;text-decoration:none;color:var(--ink-2)}
+.lang-switch a[aria-current]{color:var(--seal);text-decoration:underline;text-underline-offset:5px}
+.lang-switch a:hover{color:var(--ink)}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{letter-spacing:-.02em}
+html[lang="en"] body *{word-break:normal!important;overflow-wrap:break-word!important;line-break:auto}
+html[lang="en"] .hero h1{hyphens:manual}
+@media(max-width:700px){html[lang="en"] .hero h1{font-size:clamp(28px,7.6vw,40px)}}
+@media(max-width:1000px){.lang-switch{margin-left:auto}.lang-switch+.menu-btn{margin-left:0}}
+@media(max-width:700px){.lang-switch{font-size:11px;gap:0}.lang-switch a{padding:6px 4px}}
+html[lang^="zh"]{--sans:'Pretendard Variable',Pretendard,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;--serif:"Songti SC","Noto Serif SC","SimSun",serif}
+html[lang="ja"]{--sans:'Pretendard Variable',Pretendard,"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo","Noto Sans JP",sans-serif;--serif:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif}
+/* keep-all (set for Korean) would stop unspaced Chinese/Japanese text from wrapping. */
+html[lang^="zh"] body *,html[lang="ja"] body *{word-break:normal!important;overflow-wrap:break-word!important;line-break:strict}
+html[lang^="zh"] h1,html[lang^="zh"] h2,html[lang^="zh"] h3,html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3{letter-spacing:-.01em}
+/* Four language links leave no room for the header CTA on phones; the fixed .mobile-cta bar (v2.js) takes its place. */
+@media(max-width:560px){.lang-switch~.nav-cta{display:none}}
+@media(max-width:400px){.nav{gap:6px}.lang-switch a{padding:6px 2px}.brand{font-size:12px}}
