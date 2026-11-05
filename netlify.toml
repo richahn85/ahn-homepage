@@ -12,6 +12,21 @@
     Content-Disposition = "attachment"
 
 [[headers]]
+  for = "/downloads/wp-2026-01/*.pdf"
+  [headers.values]
+    Content-Disposition = "attachment"
+
+[[headers]]
+  for = "/downloads/wp-2026-01/*.docx"
+  [headers.values]
+    Content-Disposition = "attachment"
+
+[[headers]]
+  for = "/downloads/wp-2026-01/*.hwpx"
+  [headers.values]
+    Content-Disposition = "attachment"
+
+[[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
